@@ -99,12 +99,12 @@ if __name__ == '__main__':
 #Tuning from web
 	objTo = process_autozoom({
 		'fltShift': 1.0,
-		'fltZoom': 100000000000000000000,
+		'fltZoom': 1000000000,
 		'objFrom': objFrom
 	})
 
 	npyResult = process_kenburns({
-		'fltSteps': numpy.linspace(0.0, 8.0, 400).tolist(),
+		'fltSteps': numpy.linspace(0.0, .5, 4).tolist(),
 		'objFrom': objFrom,
 		'objTo': objTo,
 		'boolInpaint': True
