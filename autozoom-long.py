@@ -98,8 +98,8 @@ if __name__ == '__main__':
 #  
 #Tuning from web
 	objTo = process_autozoom({
-		'fltShift': 10.0,
-		'fltZoom': 10000000000000000000000000000000000000000000000000000000,
+		'fltShift': 1.0,
+		'fltZoom': 100000000000000000000,
 		'objFrom': objFrom
 	})
 
@@ -109,7 +109,7 @@ if __name__ == '__main__':
 		'objTo': objTo,
 		'boolInpaint': True
 	})
-#
+#Seetings from web
 #	objTo = process_autozoom({
 #    		'fltShift': 10.0,
 #         	'fltZoom': 10000000000000000000000000000000000000000000000000000000,
