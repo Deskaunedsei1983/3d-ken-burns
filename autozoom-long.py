@@ -97,17 +97,17 @@ if __name__ == '__main__':
 #	})
 #  
 #Tuning rom web
-  	objectTo = process_autozoom({
-    		   'dblShift': 10.0,
-         	   'dblZoom': 10000000000000000000000000000000000000000000000000000000,
-    		   'objectFrom': objectFrom
+  	objTo = process_autozoom({
+    		'fltShift': 10.0,
+         	'fltZoom': 10000000000000000000000000000000000000000000000000000000,
+    		'objFrom': objectFrom
   	})
   
-  	numpyResult = process_kenburns({
-  		  'dblSteps': numpy.linspace(0.0, 8.0, 400).tolist(),
-  		  'objectFrom': objectFrom,
-  		  'objectTo': objectTo,
-  		  'boolInpaint': True
+  	npyResult = process_kenburns({
+  		'fltSteps': numpy.linspace(0.0, 8.0, 400).tolist(),
+  		'objFrom': objectFrom,
+  		'objTo': objectTo,
+  		'boolInpaint': True
   	})
   
   
