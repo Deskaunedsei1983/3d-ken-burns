@@ -104,7 +104,7 @@ if __name__ == '__main__':
 	})
 
 	npyResult = process_kenburns({
-		'fltSteps': numpy.linspace(0.0, .1, 200).tolist(),
+		'fltSteps': numpy.linspace(0.0, .2, 400).tolist(), #Second is Speedrate in combination with 3rd Value
 		'objFrom': objFrom,
 		'objTo': objTo,
 		'boolInpaint': True
