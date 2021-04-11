@@ -96,22 +96,35 @@ if __name__ == '__main__':
 #		'boolInpaint': True
 #	})
 #  
-#Tuning rom web
-  	objTo = process_autozoom({
-    		'fltShift': 10.0,
-         	'fltZoom': 10000000000000000000000000000000000000000000000000000000,
-    		'objFrom': objectFrom
-  	})
-  
-  	npyResult = process_kenburns({
-  		'fltSteps': numpy.linspace(0.0, 8.0, 400).tolist(),
-  		'objFrom': objectFrom,
-  		'objTo': objectTo,
-  		'boolInpaint': True
-  	})
-  
-  
-  
+#Tuning from web
+	objTo = process_autozoom({
+		'fltShift': 10.0,
+		'fltZoom': 10000000000000000000000000000000000000000000000000000000,
+		'objFrom': objFrom
+	})
+
+	npyResult = process_kenburns({
+		'fltSteps': numpy.linspace(0.0, 8.0, 400).tolist(),
+		'objFrom': objFrom,
+		'objTo': objTo,
+		'boolInpaint': True
+	})
+#
+#	objTo = process_autozoom({
+#    		'fltShift': 10.0,
+#         	'fltZoom': 10000000000000000000000000000000000000000000000000000000,
+#    		'objFrom': objectFrom
+#  	})
+#  
+#  	npyResult = process_kenburns({
+#  		'fltSteps': numpy.linspace(0.0, 8.0, 400).tolist(),
+#  		'objFrom': objectFrom,
+#  		'objTo': objectTo,
+#  		'boolInpaint': True
+#  	})
+#  
+#  
+#  
 
 	moviepy.editor.ImageSequenceClip(sequence=[ npyFrame[:, :, ::-1] for npyFrame in npyResult + list(reversed(npyResult))[1:] ], fps=25).write_videofile(arguments_strOut)
 # end
